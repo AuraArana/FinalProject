@@ -23,7 +23,19 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.then(response => {
 						//console.log(response);
 						setStore({ services: response });
-					});
+                    });
+                },
+			// Use getActions to call a function within a fuction
+			loadLegal: () => {
+				fetch(url + "agenda/aura_arana")
+					.then(response => response.json())
+					.then(result => {
+						console.log("Get Contact", result),
+							setStore({
+								contacts: result
+							});
+					})
+					.catch(e => console.error(e));
 			},
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");
