@@ -12,10 +12,19 @@ const getState = ({ getStore, getActions, setStore }) => {
 					background: "white",
 					initial: "white"
 				}
-			]
+            ],
+            services: []
 		},
 		actions: {
-			// Use getActions to call a function within a fuction
+            // Use getActions to call a function within a fuction
+            	getServices: () => {
+				fetch(url + "agenda/finolweb")
+					.then(res => res.json())
+					.then(response => {
+						//console.log(response);
+						setStore({ services: response });
+					});
+			},
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");
 			},
