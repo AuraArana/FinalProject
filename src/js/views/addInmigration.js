@@ -13,7 +13,8 @@ export const AddContact = () => {
 	const [validationName, setValidationName] = useState(false);
 	const [validationPhone, setValidationPhone] = useState(false);
 	const [validationEmail, setValidationEmail] = useState(false);
-	const [validationAddress, setValidationAddress] = useState(false);
+    const [validationAddress, setValidationAddress] = useState(false);
+    const [val, setVal] = useState(false);
 	const [validation, setValidation] = useState(false);
 
 	const checkInput = input => {
