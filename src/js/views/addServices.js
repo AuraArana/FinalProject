@@ -2,7 +2,7 @@ import React, { useState, useContext, useEffect } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { Context } from "../store/appContext";
 import { Contacts } from "./Contacts";
-// import { useHistory } from "react-router-dom";
+
 
 export const AddContact = () => {
 	const { store } = useContext(Context);
@@ -31,20 +31,7 @@ export const AddContact = () => {
 		}
 	}, [validation]);
 
-	//	console.log("Hello2", name == false);
-	// const fields = e => {
-	// 	if (!name || !phone || !email || !address) {
-	// 		console.log("Hello2");
-	// 		if (!name) {
-	// 			namecla = "form-control is-invalid";
-	// 		}
-
-	// 		e.preventDefault();
-	// 	} else {
-	// 		actions.addContactAgenda(name, phone, email, address);
-	// 	}
-	// };
-
+	
 	return (
 		<div className="container">
 			<div>
@@ -57,6 +44,17 @@ export const AddContact = () => {
 							id="name"
 							className={valName ? "form-control is-invalid" : "form-control"}
 							placeholder="Full Name"
+							onChange={e => setName(e.target.value)}
+							required
+						/>
+					</div>
+                    					<div className="form-group">
+						<label>Full Name</label>
+						<input
+							type="text"
+							id="name"
+							className={valName ? "form-control is-invalid" : "form-control"}
+							placeholder="Other Name"
 							onChange={e => setName(e.target.value)}
 							required
 						/>
