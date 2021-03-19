@@ -24,9 +24,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 						//console.log(response);
 						setStore({ services: response });
                     });
-                },
-			// Use getActions to call a function within a fuction
-			loadLegal: () => {
+            },
+            	loadLegal: () => {
 				fetch(url + "agenda/aura_arana")
 					.then(response => response.json())
 					.then(result => {
@@ -37,6 +36,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					})
 					.catch(e => console.error(e));
 			},
+            
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");
 			},
