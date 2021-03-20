@@ -69,7 +69,22 @@ const getState = ({ getStore, getActions, setStore }) => {
 							});
 					})
 					.catch(e => console.error(e));
+<<<<<<< HEAD
 			},		
+=======
+            },
+            deleteLegal: () => {
+				fetch(url + "agenda/aura_arana")
+					.then(response => response.json())
+					.then(result => {
+						console.log("Get Contact", result),
+							setStore({
+								contacts: result
+							});
+					})
+					.catch(e => console.error(e));
+			},
+>>>>>>> dc9f621 (delete function)
             
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");
