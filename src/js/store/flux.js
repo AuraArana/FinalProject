@@ -23,6 +23,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.then(response => {
 						//console.log(response);
 						setStore({ services: response });
+<<<<<<< HEAD
 					});
             },
                         	deleteServices: () => {
@@ -32,7 +33,22 @@ const getState = ({ getStore, getActions, setStore }) => {
 						//console.log(response);
 						setStore({ services: response });
 					});
+=======
+                    });
+            },
+            	loadLegal: () => {
+				fetch(url + "agenda/aura_arana")
+					.then(response => response.json())
+					.then(result => {
+						console.log("Get Contact", result),
+							setStore({
+								contacts: result
+							});
+					})
+					.catch(e => console.error(e));
+>>>>>>> master
 			},
+            
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");
 			},
