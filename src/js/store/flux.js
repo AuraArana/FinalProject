@@ -23,6 +23,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.then(response => {
 						//console.log(response);
 						setStore({ services: response });
+<<<<<<< HEAD
+=======
+					});
+>>>>>>> master
             },
                         	deleteServices: () => {
 				fetch(url + "agenda/finolweb")
@@ -37,6 +41,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.then(response => {
 						//console.log(response);
 						setStore({ services: response });
+					});
+                    });
             },
             	loadLegal: () => {
 				fetch(url + "agenda/aura_arana")
@@ -47,14 +53,23 @@ const getState = ({ getStore, getActions, setStore }) => {
 								contacts: result
 					.catch(e => console.error(e));
 			},
+            	DeleteLegal: () => {
+				fetch(url + "agenda/aura_arana")
+					.then(response => response.json())
+					.then(result => {
+						console.log("Get Contact", result),
+							setStore({
+								contacts: result
+							});
+					})
+					.catch(e => console.error(e));
+			},		
             
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");
 			},
 			loadSomeData: () => {
-				/**
-					fetch().then().then(data => setStore({ "foo": data.bar }))
-				*/
+				
 			},
 			changeColor: (index, color) => {
 				//get the store
