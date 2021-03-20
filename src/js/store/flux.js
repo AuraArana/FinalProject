@@ -24,6 +24,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 						//console.log(response);
 						setStore({ services: response });
 					});
+            },
+                        	deleteServices: () => {
+				fetch(url + "agenda/finolweb")
+					.then(res => res.json())
+					.then(response => {
+						//console.log(response);
+						setStore({ services: response });
+					});
 			},
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");
