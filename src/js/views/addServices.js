@@ -59,6 +59,17 @@ export const AddContact = () => {
 							required
 						/>
 					</div>
+                                        					<div className="form-group">
+						<label>Full Name</label>
+						<input
+							type="text"
+							id="name"
+							className={valName ? "form-control is-invalid" : "form-control"}
+							placeholder="Other Name 2"
+							onChange={e => setName(e.target.value)}
+							required
+						/>
+					</div>
 					<div className="form-group">
 						<label>Email</label>
 						<input

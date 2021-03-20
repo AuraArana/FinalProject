@@ -23,6 +23,17 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.then(response => {
 						//console.log(response);
 						setStore({ services: response });
+<<<<<<< HEAD
+					});
+            },
+                        	deleteServices: () => {
+				fetch(url + "agenda/finolweb")
+					.then(res => res.json())
+					.then(response => {
+						//console.log(response);
+						setStore({ services: response });
+					});
+=======
                     });
             },
             	loadLegal: () => {
@@ -35,6 +46,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 							});
 					})
 					.catch(e => console.error(e));
+>>>>>>> master
 			},
             
 			exampleFunction: () => {
