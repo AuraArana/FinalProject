@@ -23,6 +23,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.then(response => {
 						//console.log(response);
 						setStore({ services: response });
+					});
             },
                         	deleteServices: () => {
 				fetch(url + "agenda/finolweb")
@@ -30,13 +31,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.then(response => {
 						//console.log(response);
 						setStore({ services: response });
-            },
-                                    	updateServices: () => {
-				fetch(url + "agenda/finolweb")
-					.then(res => res.json())
-					.then(response => {
-						//console.log(response);
-						setStore({ services: response });
+					});
             },
             	loadLegal: () => {
 				fetch(url + "agenda/aura_arana")
@@ -45,6 +40,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 						console.log("Get Contact", result),
 							setStore({
 								contacts: result
+							});
+					})
 					.catch(e => console.error(e));
 			},
             
