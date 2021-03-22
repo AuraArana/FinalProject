@@ -6,16 +6,17 @@ const getState = ({ getStore, getActions, setStore }) => {
 				{
 					title: "FIRST",
 					background: "white",
-					initial: "white"
+					initial: "black"
 				},
 				{
 					title: "SECOND",
 					background: "white",
-					initial: "white"
+					initial: "black"
 				}
             ],
             services: [],
-            inmigration:[]
+            inmigration:[],
+            legal:[]
 		},
 		actions: {
             // Use getActions to call a function within a fuction
@@ -25,10 +26,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.then(response => {
 						//console.log(response);
 						setStore({ services: response });
-<<<<<<< HEAD
-=======
 					});
->>>>>>> master
             },
                         	deleteServices: () => {
 				fetch(url + "agenda/finolweb")
