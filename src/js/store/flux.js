@@ -16,6 +16,7 @@ const getState = ({ getStore, getActions, setStore }) => {
             ],
             services: [],
             inmigration:[],
+            inmigration2:[],
             legal:[]
 		},
 		actions: {
