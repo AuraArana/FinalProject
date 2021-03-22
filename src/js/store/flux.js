@@ -16,8 +16,13 @@ const getState = ({ getStore, getActions, setStore }) => {
             ],
             services: [],
             inmigration:[],
+<<<<<<< HEAD
             inmigration2:[],
             legal:[]
+=======
+            legal:[],
+            legal2:[]
+>>>>>>> e8dde10 (add legal2)
 		},
 		actions: {
             // Use getActions to call a function within a fuction
@@ -29,14 +34,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 						setStore({ services: response });
 					});
             },
-                        	deleteServices: () => {
+                deleteServices: () => {
 				fetch(url + "agenda/finolweb")
 					.then(res => res.json())
 					.then(response => {
 						//console.log(response);
 						setStore({ services: response });
             },
-                                    	updateServices: () => {
+                updateServices: () => {
 				fetch(url + "agenda/finolweb")
 					.then(res => res.json())
 					.then(response => {
