@@ -55,6 +55,15 @@ const getState = ({ getStore, getActions, setStore }) => {
 							setStore({
 								contacts: result
 					.catch(e => console.error(e));
+            },
+            loadInmigration: () => {
+				fetch(url + "agenda/aura_arana")
+					.then(response => response.json())
+					.then(result => {
+						console.log("Get Contact", result),
+							setStore({
+								contacts: result
+					.catch(e => console.error(e));
 			},
             	DeleteLegal: () => {
 				fetch(url + "agenda/aura_arana")
