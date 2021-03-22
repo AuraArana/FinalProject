@@ -16,13 +16,10 @@ const getState = ({ getStore, getActions, setStore }) => {
             ],
             services: [],
             inmigration:[],
-<<<<<<< HEAD
             inmigration2:[],
             legal:[]
-=======
             legal:[],
             legal2:[]
->>>>>>> e8dde10 (add legal2)
 		},
 		actions: {
             // Use getActions to call a function within a fuction
@@ -69,9 +66,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 							});
 					})
 					.catch(e => console.error(e));
-<<<<<<< HEAD
 			},		
-=======
             },
             deleteLegal: () => {
 				fetch(url + "agenda/aura_arana")
@@ -84,7 +79,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 					})
 					.catch(e => console.error(e));
 			},
->>>>>>> dc9f621 (delete function)
             
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");
