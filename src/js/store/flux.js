@@ -32,6 +32,15 @@ const getState = ({ getStore, getActions, setStore }) => {
 					});
             },
                 deleteServices: () => {
+            Report: () => {
+				fetch(url + "agenda/finolweb")
+					.then(res => res.json())
+					.then(response => {
+						//console.log(response);
+						setStore({ services: response });
+					});
+            },
+                        	deleteServices: () => {
 				fetch(url + "agenda/finolweb")
 					.then(res => res.json())
 					.then(response => {
