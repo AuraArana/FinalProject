@@ -5,12 +5,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 			demo: [
 				{
 					title: "FIRST",
-					background: "white",
+					background: "white2",
 					initial: "white"
 				},
 				{
 					title: "SECOND",
-					background: "white",
+					background: "white2",
 					initial: "white"
 				}
             ],
@@ -25,10 +25,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.then(response => {
 						//console.log(response);
 						setStore({ services: response });
-<<<<<<< HEAD
-=======
 					});
->>>>>>> master
             },
                         	deleteServices: () => {
 				fetch(url + "agenda/finolweb")
