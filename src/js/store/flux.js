@@ -6,11 +6,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 				{
 					title: "FIRST",
 					background: "white",
+					background2: "white",
 					initial: "black"
 				},
 				{
 					title: "SECOND",
 					background: "white",
+					background2: "white",
 					initial: "black"
 				}
             ],
