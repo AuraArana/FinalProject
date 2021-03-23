@@ -70,7 +70,15 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.then(res => res.json())
 					.then(response => {
 						//console.log(response);
-						setStore({ legal: response });
+                        setStore({ legal: response });
+                    	});
+                },
+            updateServices: () => {
+				fetch(url + "agenda/updServices")
+					.then(res => res.json())
+					.then(response => {
+						//console.log(response);
+						setStore({ delete: response });
 					});
             },
             	exampleFunction: () => {
