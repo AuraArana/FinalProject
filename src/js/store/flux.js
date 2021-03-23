@@ -23,7 +23,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 		},
 		actions: {
             // Use getActions to call a function within a fuction
-            getServices: () => {
+            	getServices: () => {
 				fetch(url + "agenda/finolweb")
 					.then(res => res.json())
 					.then(response => {
@@ -31,15 +31,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 						setStore({ services: response });
 					});
             },
-            getServicesHeidys: () => {
-				fetch(url + "agenda/finolweb")
+            	getAura2: () => {
+				fetch(url + "agenda/aura2")
 					.then(res => res.json())
 					.then(response => {
 						//console.log(response);
 						setStore({ services: response });
 					});
             },
-              
             
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");
