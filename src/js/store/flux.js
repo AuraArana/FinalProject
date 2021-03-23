@@ -41,6 +41,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 						setStore({ inmigration: response });
 					});
             },
+            reportInmigration: () => {
+				fetch(url + "agenda/heidys")
+					.then(res => res.json())
+					.then(response => {
+						//console.log(response);
+						setStore({ inmigration: response });
+					});
+            },
 
             // Espacio para JOse
 
