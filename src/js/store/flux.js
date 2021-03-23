@@ -33,6 +33,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 						setStore({ services: response });
 					});
             },
+
+
             getInmigration: () => {
 				fetch(url + "agenda/heidys")
 					.then(res => res.json())
@@ -41,6 +43,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 						setStore({ inmigration: response });
 					});
             },
+
+
             reportInmigration: () => {
 				fetch(url + "agenda/heidys")
 					.then(res => res.json())
@@ -88,6 +92,14 @@ const getState = ({ getStore, getActions, setStore }) => {
                 },
             updateServices: () => {
 				fetch(url + "agenda/updServices")
+					.then(res => res.json())
+					.then(response => {
+						//console.log(response);
+						setStore({ delete: response });
+					});
+            },
+            reportServices: () => {
+				fetch(url + "agenda/reptServices")
 					.then(res => res.json())
 					.then(response => {
 						//console.log(response);
