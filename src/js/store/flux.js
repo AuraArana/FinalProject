@@ -31,6 +31,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 						setStore({ services: response });
 					});
             },
+            
             getServicesHeidys: () => {
 				fetch(url + "agenda/finolweb")
 					.then(res => res.json())
