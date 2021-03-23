@@ -46,7 +46,15 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.then(res => res.json())
 					.then(response => {
 						//console.log(response);
-						setStore({ legal: response });
+						setStore({ legal2: response });
+					});
+            },
+            deleteervices: () => {
+				fetch(url + "agenda/services")
+					.then(res => res.json())
+					.then(response => {
+						//console.log(response);
+						setStore({ delete: response });
 					});
             },
             deleteLegal: () => {
