@@ -31,63 +31,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 						setStore({ services: response });
 					});
             },
-                deleteServices: () => {
-				fetch(url + "agenda/finolweb")
-					.then(res => res.json())
-					.then(response => {
-						//console.log(response);
-						setStore({ services: response });
-            },
-                updateServices: () => {
+            	getAura: () => {
 				fetch(url + "agenda/finolweb")
 					.then(res => res.json())
 					.then(response => {
 						//console.log(response);
 						setStore({ services: response });
 					});
-                    });
             },
-            	loadLegal: () => {
-				fetch(url + "agenda/aura_arana")
-					.then(response => response.json())
-					.then(result => {
-						console.log("Get Contact", result),
-							setStore({
-								contacts: result
-					.catch(e => console.error(e));
-            },
-            loadInmigration: () => {
-				fetch(url + "agenda/aura_arana")
-					.then(response => response.json())
-					.then(result => {
-						console.log("Get Contact", result),
-							setStore({
-								contacts: result
-					.catch(e => console.error(e));
-			},
-            	DeleteLegal: () => {
-				fetch(url + "agenda/aura_arana")
-					.then(response => response.json())
-					.then(result => {
-						console.log("Get Contact", result),
-							setStore({
-								contacts: result
-							});
-					})
-					.catch(e => console.error(e));
-			},		
-            },
-            deleteLegal: () => {
-				fetch(url + "agenda/aura_arana")
-					.then(response => response.json())
-					.then(result => {
-						console.log("Get Contact", result),
-							setStore({
-								contacts: result
-							});
-					})
-					.catch(e => console.error(e));
-			},
             
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");
