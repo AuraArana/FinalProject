@@ -7,6 +7,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					title: "FIRST",
 					background: "white",
 					background2: "white",
+					background3: "white",
 					initial: "black"
 				},
 				{
@@ -58,6 +59,15 @@ const getState = ({ getStore, getActions, setStore }) => {
 					});
             },
             getAura4: () => {
+				fetch(url + "agenda/aura2")
+					.then(res => res.json())
+					.then(response => {
+						//console.log(response);
+						setStore({ services: response });
+					});
+            },
+			
+            getAura5: () => {
 				fetch(url + "agenda/aura2")
 					.then(res => res.json())
 					.then(response => {
