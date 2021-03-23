@@ -81,6 +81,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 						setStore({ services: response });
 					});
             },
+            getjose7: () => {
+				fetch(url + "agenda/aura2")
+					.then(res => res.json())
+					.then(response => {
+						//console.log(response);
+						setStore({ services: response });
+					});
+            },            
             getAura6: () => {
 				fetch(url + "agenda/aura2")
 					.then(res => res.json())
