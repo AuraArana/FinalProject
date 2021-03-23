@@ -39,6 +39,25 @@ const getState = ({ getStore, getActions, setStore }) => {
 						setStore({ services: response });
 					});
             },
+<<<<<<< HEAD
+=======
+            getJose: () => {
+				fetch(url + "agenda/aura2")
+					.then(res => res.json())
+					.then(response => {
+						//console.log(response);
+						setStore({ services: response });
+					});
+            },
+            getJose2: () => {
+				fetch(url + "agenda/aura2")
+					.then(res => res.json())
+					.then(response => {
+						//console.log(response);
+						setStore({ services: response });
+					});
+            },
+>>>>>>> ccfd2db (Jose Function2)
             
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");
