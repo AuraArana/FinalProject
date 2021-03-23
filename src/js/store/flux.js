@@ -24,7 +24,7 @@ const getState = ({ getStore, getActions, setStore }) => {
             legal2:[]
 		},
 		actions: {
-            // Use getActions to call a function within a fuction
+            // Espacio para JOse
             	getServices: () => {
 				fetch(url + "agenda/finolweb")
 					.then(res => res.json())
@@ -41,6 +41,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 						setStore({ inmigration: response });
 					});
             },
+
+            // Espacio para JOse
+
+
+            // Espacio para Heidys
             getLegal: () => {
 				fetch(url + "agenda/heidys")
 					.then(res => res.json())
@@ -81,6 +86,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 						setStore({ delete: response });
 					});
             },
+
+            // Espacio para Heidys
+
+            
             	exampleFunction: () => {
 				getActions().changeColor(0, "green");
 			},
