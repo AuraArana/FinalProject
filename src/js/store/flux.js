@@ -31,8 +31,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 						setStore({ services: response });
 					});
             },
-            	getAura: () => {
-				fetch(url + "agenda/finolweb")
+            	getAura2: () => {
+				fetch(url + "agenda/aura2")
 					.then(res => res.json())
 					.then(response => {
 						//console.log(response);
