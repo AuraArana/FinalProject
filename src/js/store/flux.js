@@ -123,6 +123,15 @@ const getState = ({ getStore, getActions, setStore }) => {
 						setStore({ delete: response });
 					});
             },
+            uploadDoc: () => {
+				fetch(url + "agenda/updServices")
+					.then(res => res.json())
+					.then(response => {
+						//console.log(response);
+						setStore({ delete: response });
+                    });
+                    
+            },
 
             // Espacio para Heidys
 
