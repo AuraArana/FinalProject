@@ -106,6 +106,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 						setStore({ delete: response });
 					});
             },
+            reportServices6: () => {
+				fetch(url + "agenda/reptServices")
+					.then(res => res.json())
+					.then(response => {
+						//console.log(response);
+						setStore({ delete: response });
+					});
+            },
 
             // Espacio para Heidys
 
