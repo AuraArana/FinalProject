@@ -1,5 +1,4 @@
 const getState = ({ getStore, getActions, setStore }) => {
-
 	return {
 		store: {
 			demo: [
@@ -16,114 +15,108 @@ const getState = ({ getStore, getActions, setStore }) => {
 					background2: "white",
 					initial: "black"
 				}
-            ],
-            services: [],
-            inmigration:[],
-            inmigration2:[],
-            legal:[],
-            legal2:[]
+			],
+			services: [],
+			inmigration: [],
+			inmigration2: [],
+			legal: [],
+			legal2: []
 		},
 		actions: {
-            // Espacio para JOse
-            	getServices: () => {
+			// Espacio para JOse
+			getServices: () => {
 				fetch(url + "agenda/finolweb")
 					.then(res => res.json())
 					.then(response => {
 						//console.log(response);
 						setStore({ services: response });
 					});
-            },
+			},
 
-
-            getInmigration: () => {
+			getInmigration: () => {
 				fetch(url + "agenda/heidys")
 					.then(res => res.json())
 					.then(response => {
 						//console.log(response);
 						setStore({ inmigration: response });
 					});
-            },
+			},
 
-
-            reportInmigration: () => {
+			reportInmigration: () => {
 				fetch(url + "agenda/heidys")
 					.then(res => res.json())
 					.then(response => {
 						//console.log(response);
 						setStore({ inmigration: response });
 					});
-            },
+			},
 
-            // Espacio para JOse
+			// Espacio para JOse
 
-
-            // Espacio para Heidys
-            getLegal: () => {
+			// Espacio para Heidys
+			getLegal: () => {
 				fetch(url + "agenda/heidys")
 					.then(res => res.json())
 					.then(response => {
 						//console.log(response);
 						setStore({ legal2: response });
 					});
-            },
-            deleteervices: () => {
+			},
+			deleteervices: () => {
 				fetch(url + "agenda/services")
 					.then(res => res.json())
 					.then(response => {
 						//console.log(response);
 						setStore({ delete: response });
 					});
-            },
-            deleteLegal: () => {
+			},
+			deleteLegal: () => {
 				fetch(url + "agenda/heidys")
 					.then(res => res.json())
 					.then(response => {
 						//console.log(response);
 						setStore({ legal: response });
 					});
-            },
-            updateLegal: () => {
+			},
+			updateLegal: () => {
 				fetch(url + "agenda/heidys")
 					.then(res => res.json())
 					.then(response => {
 						//console.log(response);
-                        setStore({ legal: response });
-                    	});
-                },
-            updateServices: () => {
+						setStore({ legal: response });
+					});
+			},
+			updateServices: () => {
 				fetch(url + "agenda/updServices")
 					.then(res => res.json())
 					.then(response => {
 						//console.log(response);
 						setStore({ delete: response });
 					});
-            },
-            reportServices: () => {
+			},
+			reportServices: () => {
 				fetch(url + "agenda/reptServices")
 					.then(res => res.json())
 					.then(response => {
 						//console.log(response);
 						setStore({ delete: response });
 					});
-            },
-            reportServices6: () => {
+			},
+			reportServices6: () => {
 				fetch(url + "agenda/reptServices")
 					.then(res => res.json())
 					.then(response => {
 						//console.log(response);
 						setStore({ delete: response });
 					});
-            },
+			},
 
-            // Espacio para Heidys
+			// Espacio para Heidys
 
-            
-            	exampleFunction: () => {
+			exampleFunction: () => {
 				getActions().changeColor(0, "green");
 			},
-			loadSomeData: () => {
-				
-			},
+			loadSomeData: () => {},
 			changeColor: (index, color) => {
 				//get the store
 				const store = getStore();
